@@ -23,5 +23,6 @@ texture = ExtResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Hero" parent="." instance=ExtResource( 2 )]
-position = Vector2( 253, 375 )
+position = Vector2( 165, 298 )
 scale = Vector2( 2, 2 )
+GRAVITY = 50
