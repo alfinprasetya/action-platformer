@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-idle-2-03.png-521e956e47b3fd3f7245234d158df1f5.stex"
+path="res://.import/oak_woods_tileset.png-4901a02cd6bd960973339d27266fbe1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hero/Idle/adventurer-idle-2-03.png"
-dest_files=[ "res://.import/adventurer-idle-2-03.png-521e956e47b3fd3f7245234d158df1f5.stex" ]
+source_file="res://assets/Map/oak_woods_tileset.png"
+dest_files=[ "res://.import/oak_woods_tileset.png-4901a02cd6bd960973339d27266fbe1e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

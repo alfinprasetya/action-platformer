@@ -1,0 +1,60 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=9 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "run"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "fall"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "attack"
+
+[sub_resource type="AnimationNodeTransition" id=6]
+input_count = 2
+input_0/name = "jump"
+input_0/auto_advance = false
+input_1/name = "fall"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeTransition" id=7]
+input_count = 3
+input_0/name = "idle"
+input_0/auto_advance = false
+input_1/name = "run"
+input_1/auto_advance = false
+input_2/name = "attack"
+input_2/auto_advance = false
+
+[sub_resource type="AnimationNodeTransition" id=8]
+input_count = 2
+input_0/name = "air"
+input_0/auto_advance = false
+input_1/name = "ground"
+input_1/auto_advance = false
+
+[resource]
+graph_offset = Vector2( 0, 85.6667 )
+nodes/Animation/node = SubResource( 5 )
+nodes/Animation/position = Vector2( 560, 426.667 )
+"nodes/Animation 2/node" = SubResource( 1 )
+"nodes/Animation 2/position" = Vector2( 560, 320 )
+"nodes/Animation 3/node" = SubResource( 2 )
+"nodes/Animation 3/position" = Vector2( 560, 213.333 )
+"nodes/Animation 4/node" = SubResource( 3 )
+"nodes/Animation 4/position" = Vector2( 560, 106.667 )
+"nodes/Animation 5/node" = SubResource( 4 )
+"nodes/Animation 5/position" = Vector2( 560, 0 )
+nodes/air/node = SubResource( 6 )
+nodes/air/position = Vector2( 773.333, 53.3333 )
+nodes/ground/node = SubResource( 7 )
+nodes/ground/position = Vector2( 773.333, 293.333 )
+nodes/output/position = Vector2( 1173.33, 160 )
+nodes/state/node = SubResource( 8 )
+nodes/state/position = Vector2( 986.667, 160 )
+node_connections = [ "state", 0, "air", "state", 1, "ground", "output", 0, "state", "air", 0, "Animation 5", "air", 1, "Animation 4", "ground", 0, "Animation 3", "ground", 1, "Animation 2", "ground", 2, "Animation" ]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adventurer-idle-00.png-d883dadceb26bae7e4ece509b78422ca.stex"
+path="res://.import/background_layer_2.png-6e80784147afbc3f5a5d5809942fb4ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hero/Idle/adventurer-idle-00.png"
-dest_files=[ "res://.import/adventurer-idle-00.png-d883dadceb26bae7e4ece509b78422ca.stex" ]
+source_file="res://assets/Map/background/background_layer_2.png"
+dest_files=[ "res://.import/background_layer_2.png-6e80784147afbc3f5a5d5809942fb4ad.stex" ]
 
 [params]
 

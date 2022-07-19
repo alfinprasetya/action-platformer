@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/UI/arrow.png" type="Texture" id=1]
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="jump" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0.27451 )
+position = Vector2( 560, 270 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 1 )
+action = "jump"
+
+[node name="left" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0.27451 )
+position = Vector2( 15, 335 )
+rotation = 4.71239
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 1 )
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0.27451 )
+position = Vector2( 165, 270 )
+rotation = 1.5708
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 1 )
+action = "right"
