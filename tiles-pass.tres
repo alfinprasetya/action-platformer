@@ -1,14 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_resource type="TileSet" load_steps=2 format=2]
 
 [ext_resource path="res://assets/Map/oak_woods_tileset.png" type="Texture" id=1]
-[ext_resource path="res://Hero.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Map/background/background_layer_1.png" type="Texture" id=3]
-[ext_resource path="res://assets/Map/background/background_layer_2.png" type="Texture" id=4]
-[ext_resource path="res://assets/Map/background/background_layer_3.png" type="Texture" id=5]
-[ext_resource path="res://Control.tscn" type="PackedScene" id=6]
-[ext_resource path="res://tiles-solid.tres" type="TileSet" id=7]
 
-[sub_resource type="TileSet" id=1]
+[resource]
 0/name = "oak_woods_tileset.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -149,68 +143,3 @@
 9/shape_one_way_margin = 0.0
 9/shapes = [  ]
 9/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 130.667, 5 )
-
-[node name="Main" type="Node2D"]
-
-[node name="Background" type="Node2D" parent="."]
-visible = false
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
-
-[node name="BackgroundLayer1" type="Sprite" parent="Background"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-centered = false
-
-[node name="BackgroundLayer2" type="Sprite" parent="Background"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 4 )
-centered = false
-
-[node name="BackgroundLayer3" type="Sprite" parent="Background"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="Tiles One-Way" type="TileMap" parent="."]
-scale = Vector2( 1.5, 1.5 )
-tile_set = SubResource( 1 )
-cell_size = Vector2( 24, 24 )
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 393233, 2, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 393243, 4, 0, 458769, 3, 0, 458770, 1, 0, 458771, 1, 0, 458772, 1, 0, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 458776, 1, 0, 458777, 1, 0, 458778, 1, 0, 458779, 5, 0, 524305, 3, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 5, 0 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Tiles One-Way"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles One-Way/StaticBody2D"]
-position = Vector2( 541.333, 149.667 )
-shape = SubResource( 2 )
-one_way_collision = true
-
-[node name="Tiles Solid" type="TileMap" parent="."]
-scale = Vector2( 1.5, 1.5 )
-tile_set = ExtResource( 7 )
-cell_size = Vector2( 24, 24 )
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 6, 0, 524314, 7, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 9, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 8, 0, 589851, 1, 0, 589852, 1, 0, 589853, 1, 0, 589854, 1, 0, 589855, 1, 0, 589856, 1, 0, 589857, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 1, 0, 655391, 1, 0, 655392, 1, 0, 655393, 1, 0 )
-
-[node name="Hero" parent="." instance=ExtResource( 2 )]
-position = Vector2( 421, 113 )
-scale = Vector2( 1.5, 1.5 )
-
-[node name="Camera2D" type="Camera2D" parent="Hero"]
-current = true
-limit_left = 0
-limit_bottom = 390
-limit_smoothed = true
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-editor_draw_limits = true
-
-[node name="Control" parent="." instance=ExtResource( 6 )]
