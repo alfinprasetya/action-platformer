@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tiles-pass.tres" type="TileSet" id=1]
 [ext_resource path="res://Hero.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Map/background/background_layer_3.png" type="Texture" id=5]
 [ext_resource path="res://Control.tscn" type="PackedScene" id=6]
 [ext_resource path="res://tiles-solid.tres" type="TileSet" id=7]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 130.667, 5 )
@@ -21,6 +22,8 @@ scale = Vector2( 1.5, 1.5 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 24, 24 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+collision_layer = 2
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 393233, 2, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 393243, 4, 0, 458769, 3, 0, 458770, 1, 0, 458771, 1, 0, 458772, 1, 0, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 458776, 1, 0, 458777, 1, 0, 458778, 1, 0, 458779, 5, 0, 524305, 3, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 5, 0 )
 __meta__ = {
@@ -28,6 +31,8 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Tiles One-Way"]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tiles One-Way/StaticBody2D"]
 position = Vector2( 541.333, 149.667 )
@@ -39,6 +44,8 @@ scale = Vector2( 1.5, 1.5 )
 tile_set = ExtResource( 7 )
 cell_size = Vector2( 24, 24 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+collision_layer = 2
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -1, 5, 0, 65535, 5, 0, 131071, 5, 0, 196607, 5, 0, 262143, 5, 0, 327679, 5, 0, 393215, 5, 0, 458751, 5, 0, 524287, 5, 0, 589823, 5, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 6, 0, 524314, 7, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 4, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 9, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 8, 0, 589851, 1, 0, 589852, 1, 0, 589853, 1, 0, 589854, 1, 0, 589855, 1, 0, 589856, 1, 0, 589857, 5, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 1, 0, 655391, 1, 0, 655392, 1, 0, 655393, 5, 0 )
 
@@ -95,6 +102,8 @@ centered = false
 
 [node name="Fallzone" type="Area2D" parent="."]
 position = Vector2( -79, 4 )
+collision_layer = 4
+collision_mask = 0
 __meta__ = {
 "_edit_group_": true
 }
@@ -102,5 +111,10 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
 position = Vector2( 1404, 453 )
 shape = SubResource( 3 )
+
+[node name="Key" parent="." instance=ExtResource( 8 )]
+position = Vector2( 654, 184 )
+collision_layer = 8
+collision_mask = 0
 
 [connection signal="body_entered" from="Fallzone" to="Hero" method="_on_Fallzone_body_entered"]

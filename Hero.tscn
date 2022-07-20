@@ -154,6 +154,7 @@ tracks/1/keys = {
 }
 
 [node name="Hero" type="KinematicBody2D"]
+collision_mask = 14
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -189,3 +190,4 @@ parameters/state/current = 0
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 22 )
+collision_mask = 2
